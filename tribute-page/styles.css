@@ -1,10 +1,15 @@
 #img-div {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 #image {
     display: block;
     max-width: 100%;
     height: auto;
+    margin: auto;
+}
+#img-caption {
+    margin: auto;
+    text-align: center;
 }
