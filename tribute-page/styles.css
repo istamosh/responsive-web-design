@@ -1,7 +1,9 @@
+body {
+    text-align: center;
+}
 #img-div {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 #image {
     display: block;
@@ -11,5 +13,12 @@
 }
 #img-caption {
     margin: auto;
-    text-align: center;
+}
+.list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+#tribute-info {
+    margin-left: 20px;
 }
