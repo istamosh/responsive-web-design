@@ -2,36 +2,82 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
+#main {
+    background-color: #ececec;
+    border-radius: 15px;
+}
 #title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
+    padding: 20px 0;
+    margin: 0;
 }
 #img-div {
-    background-color: lightgrey;
-    margin: 0 auto;
+    margin: 0 max(16px, 50% - 600px/2);
+    padding: 7px;
+    background-color: white;
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.5);
 }
 #image {
     display: block;
     max-width: 100%;
     height: auto;
-    padding-top: 25px;
     margin: 0 auto;
+    filter: sepia(90%) brightness(140%);
 }
 #img-caption {
-    padding: 5px 0;
+    padding: 5px 0 0;
     font-family: 'Courier New', Courier, monospace;
     font-size: 80%;
 }
 #tribute-info {
-    margin-bottom: 5px;
+    margin: 16px 0 5px;
 }
 .list {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
+    padding: 0 16px;
 }
 ul {
     margin-top: 0;
     padding-left: 20px;
     text-align: justify;
+}
+.letterpress {
+    text-shadow: 0 1px 1px white;
+    color: rgb(32, 32, 32);
+}
+#tribute-link {
+    text-decoration: none;
+    color: #39c;
+    background:
+    linear-gradient(
+      to right,
+      #39c,
+      white,
+      white
+    ),
+    linear-gradient(
+      to right,
+      #39c,
+      #39c
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+}
+#tribute-link:visited {
+    color: #39c;
+}
+#tribute-link:hover {
+    background-size: 0 3px, 100% 3px;
+}
+#tribute-link:active {
+    background-color: #39c;
+    color: white;
+}
+.wiki {
+    color: #39c;
 }
