@@ -5,6 +5,7 @@ body {
 #main {
     background-color: #ececec;
     border-radius: 15px;
+    padding-bottom: 1px;
 }
 #title {
     font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
@@ -96,8 +97,8 @@ li a:active {
     linear-gradient(
       to right,
       #39c,
-      white,
-      white
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
     ),
     linear-gradient(
       to right,
