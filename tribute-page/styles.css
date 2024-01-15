@@ -90,6 +90,9 @@ li a:active {
     text-shadow: 0 1px 1px white;
     color: rgb(32, 32, 32);
 }
+h2 {
+    padding: 0 16px;
+}
 #tribute-link {
     text-decoration: none;
     color: #39c;
