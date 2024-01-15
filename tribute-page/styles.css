@@ -34,7 +34,7 @@ h4 {
     font-size: 80%;
 }
 #tribute-info {
-    margin: 16px 0 5px;
+    margin: 20px 0 16px;
 }
 .list {
     display: flex;
@@ -43,15 +43,47 @@ h4 {
     margin: auto;
     padding: 0 16px;
 }
-ul {
+.main-list {
     margin-top: 0;
-    padding-left: 20px;
-    text-align: justify;
+    padding-inline-start: 0px;
+    text-align: left;
+}
+.no-bullets {
+    list-style: none;
+}
+.main-list>li {
+    padding-left: 60px;
+    text-indent: -60px;
+    margin: 12px 0;
+    line-height: 150%;
+}
+.main-list>li:first-of-type, .main-list>li:last-of-type {
+    margin: 0;
+}
+.main-list>li::after {
+    content: '.';
 }
 .year {
     font-weight: bold;
-    width: 55px;
+    text-align: right;
     display: inline-block;
+    width: 55px;
+    padding-right: 5px;
+}
+.year::after {
+    content: ' -';
+}
+li a:visited {
+    color: inherit;
+}
+li a:active {
+    color: #ececec;
+    background-color: rgb(32, 32, 32);
+}
+.superscript {
+    font-size: 75%;
+    position: relative;
+    top: -4px;
 }
 .letterpress {
     text-shadow: 0 1px 1px white;
