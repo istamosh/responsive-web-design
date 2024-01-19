@@ -1,1 +1,29 @@
-/* css */
+#navbar {
+    position: fixed;
+    min-width: 300px;
+    top: 0; left: 0;
+    width: 300px; height: 100%;
+}
+/* if max width 815px and below */
+@media only screen and (max-width: 815px) {
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 250px;
+        border: none;
+        z-index: 1;
+    }
+    /* makes margin spaces so they won't collide */
+    #main-doc {
+        margin-top: 250px;
+        left: 0;
+    }
+}
+@media only screen and (min-width: 816px) {
+    #main-doc {
+        margin-left: 300px;
+    }
+}
