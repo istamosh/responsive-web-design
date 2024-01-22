@@ -25,15 +25,17 @@
             <header>Introduction</header>
 
             <article>
-                <p></p>
-                <p></p>
-    
-                <code></code>
-    
+                <p><strong>What is git?</strong> Refer from <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer">git-scm website</a>, is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+                <p>If I tell you more about other topics about git and its mechanism or features, you will be overwhelmed and afraid to continue, I will show you how to <a href="https://www.git-scm.com/downloads" target="_blank">download</a> and install git on your system instead.</p>
+                <p>I assumed you already downloaded the git, just open the installer and choose Next until the installation finished. Then check the installation existed by opening up Terminal (Linux and MacOS) or Command Prompt (Windows).</p>
+                
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li><strong>Windows:</strong> pressing <kbd>Win+R</kbd> button to open "Run" window, then type <var>cmd</var> to open Command Prompt window</li>
+                    <li><strong>MacOS:</strong> Applications > Utilites > Terminal</li>
+                    <li><strong>Linux:</strong> pressing <kbd>CTRL+ALT+T</kbd> button to open Terminal</li>
                 </ul>
+
+                <p>Type <code>git -v</code> and press Enter on your keyboard to check installed git version.</p>
             </article>
         </section>
 
@@ -42,14 +44,24 @@
             <header>Setup</header>
 
             <article>
-                <p></p>
-                <p></p>
+                <p>
+                    Using git can be done on local and remote, initializing on local environment is called local repository,
+                    repository is a whole git environment for your entire project that contains all your project files and directories.
+                </p>
+                <p>To use git right away, you need to make git environment on a folder/directory. Initialize it by using these commands on your preferred Terminal:</p>
     
-                <code></code>
+                <pre>
+                    <code>
+$ cd /path/to/project/directory
+$ git init
+                    </code>
+                </pre>
     
+                <p>Creating empty repository will generate these files and is recognized by git:</p>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li><var>.git</var> directory, this file represents local repository head file, by default this is hidden, if this file is modified or deleted, then this local repository is no longer recognized by git</li>
+                    <li><var>.gitignore</var> file, this is a file that excludes file and directory listed inside here</li>
+                    <li><var>README.MD</var> file, this is a readme file that can be used on GitHub repository landing page</li>
                 </ul>
             </article>
         </section>
@@ -59,14 +71,25 @@
             <header>Commands</header>
 
             <article>
-                <p></p>
-                <p></p>
+                <p>To initialize git repository until commiting to local repository (continuing from Setup section), use these commands in order:</p>
     
-                <code></code>
+                <pre>
+                    <code>
+$ cd /path/to/project/directory
+$ git init
+$ git add .
+$ git commit
+                    </code>
+                </pre>
     
+                <p>Here is the rundown of commands:</p>
+
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Head to your project directory</li>
+                    <li>Initialize an empty git repository</li>
+                    <li>Between this commands, you can work on your project by add and edit files to be commited later as your project save checkpoint</li>
+                    <li>Add all (using "." sign) existing files into staging area (more on that later)</li>
+                    <li>Commit your staged files into your local git repository</li>
                 </ul>
             </article>
         </section>
@@ -76,15 +99,48 @@
             <header>Environments</header>
 
             <article>
-                <p></p>
-                <p></p>
-    
-                <code></code>
+                <p>
+                    There are two environments of git, local and remote repository,
+                    <strong>local</strong> can be used for local repository while <strong>remote</strong>
+                    is a hosted repository than can be accessed over internet.
+                </p>
+                <p>Here are the advantages of local repository:</p>
     
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Can only be accessed on local such as LAN and above connection (except over internet) so
+                        the repository is more private
+                    </li>
+                    <li>Removes the need of hosting</li>
+                    <li>Removes the need of internet connection</li>
+                    <li>Avoid network issues</li>
+                    <li>Removes the need of backup files, act as an save and checkpoints 
+                        in case of messed up project you can go back to previous checkpoint
+                    </li>
                 </ul>
+
+                <p>And here are the advantages of remote repository:</p>
+
+                <ul>
+                    <li>Easy cross platform access of projects</li>
+                    <li>Enabling collaboration</li>
+                    <li>Project visibility</li>
+                </ul>
+
+                <img src="" alt="cloning the git repository">
+
+                <p>Let's assume you already make git repository on GitHub and copied the remote address
+                    like the above picture. Continuing from last commit commands, 
+                    here is the command for pushing local commit into newly created 
+                    remote repository on GitHub as example. Depending on your working branch name,
+                    in this case it is on "master" branch, so the commands are:
+                </p>
+
+                <pre>
+                    <code>
+$ git remote add origin https://github.com/my-username/repository-name.git
+$ git push -u origin master
+                    </code>
+                </pre>
             </article>
         </section>
 
