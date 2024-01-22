@@ -126,9 +126,9 @@ $ git commit
                     <li>Project visibility</li>
                 </ul>
 
-                <img src="" alt="cloning the git repository">
+                <img src="https://raw.githubusercontent.com/istamosh/responsive-web-design/master/technical-documentation-page/src/github-clone.jpg" alt="cloning the git repository">
 
-                <p>Let's assume you already make git repository on GitHub and copied the remote address
+                <p>Let's assume you already make git repository hosted on GitHub and copied the remote address
                     like the above picture. Continuing from last commit commands, 
                     here is the command for pushing local commit into newly created 
                     remote repository on GitHub as example. Depending on your working branch name,
@@ -141,6 +141,16 @@ $ git remote add origin https://github.com/my-username/repository-name.git
 $ git push -u origin master
                     </code>
                 </pre>
+
+                <p>Everytime you are done on local commits and want to push your commits 
+                    into GitHub remote repository you need to type this in Terminal:
+                </p>
+                
+                <pre>
+                    <code>
+$ git push -u origin master
+                    </code>
+                </pre>
             </article>
         </section>
 
@@ -149,14 +159,50 @@ $ git push -u origin master
             <header>Branches</header>
 
             <article>
-                <p></p>
-                <p></p>
+                <p>Need to experiment something or adding a feature on your project and 
+                    don't want to mess up existing project? git provides branching 
+                    for your needs, branching is done locally by using this command and 
+                    switch to your desired branch name:
+                </p>
     
-                <code></code>
-    
+                <pre>
+                    <code>
+$ git checkout -b your-branch-name
+$ git checkout your-branch-name
+                    </code>
+                </pre>
+
+                <p>You might want to work on your project and make changes, then commit 
+                    your changes on local branch, in case if you forget how to commit you can go <a href="#Commands">back to Commands section.</a> 
+                    Then if you are done on local and want to push into remote with that feature branch, 
+                    you can do this on Terminal:
+                </p>
+                
+                <pre>
+                    <code>
+$ git push -u origin your-branch-name-same-as-local
+                    </code>
+                </pre>
+
+                <p>The code right before this is done one time only, 
+                    the next time you want to push your commited changes on local 
+                    you can do this instead:
+                </p>
+
+                <pre>
+                    <code>
+$ git push
+                    </code>
+                </pre>
+
+                <p>
+                    Here are the benefits of branching:
+                </p>
+                
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Uninterrupted works and commits while on collaboration with others</li>
+                    <li>Does not interrupt the main branch of the project, usually when it is live</li>
+                    <li>Easily track any changes and manages versions</li>
                 </ul>
             </article>
         </section>
