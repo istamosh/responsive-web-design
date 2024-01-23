@@ -16,6 +16,7 @@
             <li><a href="#Commands" class="nav-link">Commands</a></li>
             <li><a href="#Environments" class="nav-link">Environments</a></li>
             <li><a href="#Branches" class="nav-link">Branches</a></li>
+            <li><a href="#Syncing" class="nav-link">Syncing</a></li>
         </ul>
     </nav>
 
@@ -204,6 +205,68 @@ $ git push
                     <li>Does not interrupt the main branch of the project, usually when it is live</li>
                     <li>Easily track any changes and manages versions</li>
                 </ul>
+            </article>
+        </section>
+
+        <!-- SECTION SIX -->
+        <section class="main-section" id="Syncing">
+            <header>Syncing</header>
+
+            <article>
+                <p>If you are working on remote repository too and need to maintain 
+                    your local in sync with remote, you need two commands called 
+                    git pull and push. But first update your current local branch 
+                    so you know if your local branch is already in sync or behind 
+                    from your remote branch, and check your status afterwards.
+                </p>
+
+                <pre>
+                    <code>
+$ git remote update
+$ git status
+                    </code>
+                </pre>
+
+                <p>
+                    These are the definition of git pull and git push, so you know 
+                    what to do next.
+                </p>
+
+                <ul>
+                    <li><strong>Pull:</strong> an act of pulling updates from remote into 
+                    your local repository, this happens if your local is behind your remote, 
+                    if you invoke this command and your local is already in sync, then the 
+                    message shows "already up to date"</li>
+                    <li><strong>Push:</strong> an act of pushing your local changes into remote, 
+                    will make a checkpoint of your local to remote, this happens everytime you commit 
+                    your changes on your local project</li>
+                </ul>
+
+                <p>
+                    If your local branch commits are behind remote branch commits, do this command everytime after <code>git remote update</code>:
+                </p>
+
+                <pre>
+                    <code>
+$ git pull
+                    </code>
+                </pre>
+
+                <p>If your local is ahead of remote (after commit have been done), do this command everytime you want to push your commit into remote:</p>
+
+                <pre>
+                    <code>
+$ git push
+                    </code>
+                </pre>
+
+                <p>Now you can check your commit log by using this command (after that, quit by pressing <kbd>q</kbd> on your keyboard):</p>
+
+                <pre>
+                    <code>
+$ git log --oneline
+                    </code>
+                </pre>
             </article>
         </section>
     </main>
