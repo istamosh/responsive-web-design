@@ -1,29 +1,42 @@
+body {
+    display: flex;
+}
 #navbar {
-    position: fixed;
-    min-width: 300px;
-    top: 0; left: 0;
-    width: 300px; height: 100%;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+}
+header {
+    text-align: center;
+    font-weight: bold;
 }
 /* if max width 815px and below */
 @media only screen and (max-width: 815px) {
-    #navbar {
-        position: absolute;
-        top: 0;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        max-height: 250px;
-        border: none;
-        z-index: 1;
+    body {
+        flex-direction: column;
     }
-    /* makes margin spaces so they won't collide */
+    #navbar {
+        position: fixed;
+    }
+    #navbar ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    #navbar li {
+        display: inline;
+    }
+    #navbar header,#navbar ul{
+        padding-right: 16px;
+    }
+    /* makes margin spaces so they won't collide with fixed pos. navbar */
     #main-doc {
-        margin-top: 250px;
-        left: 0;
+        margin-top: 158px;
     }
 }
 @media only screen and (min-width: 816px) {
-    #main-doc {
-        margin-left: 300px;
-    }
+    /* body {
+        display: flex;
+    } */
 }
