@@ -1,9 +1,7 @@
-body {
-    display: flex;
-}
 #navbar {
-    background-color: white;
+    background-color: rgb(240, 240, 240);
     width: 100%;
+    /* always display on top */
     z-index: 1;
 }
 header {
@@ -12,27 +10,59 @@ header {
 }
 /* if max width 815px and below */
 @media only screen and (max-width: 815px) {
-    body {
-        flex-direction: column;
-    }
+    /* makes nav always displayed even when scrolling */
     #navbar {
         position: fixed;
+        /* prevent display gap */
+        top: 0; left: 0;
     }
+    /* display spaced list */
     #navbar ul {
         list-style-type: none;
         padding: 0;
         display: flex;
-        justify-content: space-around;
+        /* wrap flex items on new line if being narrowed */
+        /* flex-wrap: wrap; */
+        /* justifying to prevent clipping on first list */
+        justify-content: space-between;
+        margin: 0;
+        /* add horz. scrollbar for nav if width not suitable */
+        overflow-x: auto;
     }
     #navbar li {
+        /* display list horizontally */
         display: inline;
+        text-align: center;
+        /* display flex items div. by 6 on suitable width spacing */
+        /* flex-basis: 16%; */
+        /* add spacing if flex items on new line */
+        padding: 10px 8px;
     }
-    #navbar header,#navbar ul{
+    /* #navbar header, #navbar ul {
         padding-right: 16px;
-    }
-    /* makes margin spaces so they won't collide with fixed pos. navbar */
+    } */
     #main-doc {
-        margin-top: 158px;
+        /* makes margin spaces so they won't collide with fixed pos. navbar */
+        margin-top: 99px;
+    }
+    /* creating pivot point for nav href clicking */
+    .main-section {
+        padding-top: 99px;
+        margin-top: -99px;
+    }
+
+    article pre {
+        /* spawn horz. scrollbar for codeblock */
+        overflow-x: auto;
+    }
+    article img {
+        /* keep aspect ratio even when shrinked */
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        /* make centered image */
+        display: block;
+        margin: 0 auto;
     }
 }
 @media only screen and (min-width: 816px) {
