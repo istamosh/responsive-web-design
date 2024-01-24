@@ -1,4 +1,8 @@
 #navbar {
+    /* persistent even when scrolling */
+    position: fixed;
+    /* prevent display gap */
+    top: 0; left: 0;
     background-color: rgb(240, 240, 240);
     width: 100%;
     /* always display on top */
@@ -10,22 +14,25 @@ header {
 }
 /* if max width 815px and below */
 @media only screen and (max-width: 815px) {
-    /* makes nav always displayed even when scrolling */
     #navbar {
-        position: fixed;
-        /* prevent display gap */
-        top: 0; left: 0;
+        /* reserve spacing for horz. scrollbar */
+        height: 53px;
+    }
+    #navbar header {
+        display: none;
     }
     /* display spaced list */
     #navbar ul {
         list-style-type: none;
         padding: 0;
         display: flex;
-        /* wrap flex items on new line if being narrowed */
-        /* flex-wrap: wrap; */
+        /* vertical centering for list */
+        align-items: center;
         /* justifying to prevent clipping on first list */
         justify-content: space-between;
         margin: 0;
+        /* makes flex height takes up parent spacing */
+        height: 100%;
         /* add horz. scrollbar for nav if width not suitable */
         overflow-x: auto;
     }
@@ -33,22 +40,20 @@ header {
         /* display list horizontally */
         display: inline;
         text-align: center;
-        /* display flex items div. by 6 on suitable width spacing */
-        /* flex-basis: 16%; */
-        /* add spacing if flex items on new line */
-        padding: 10px 8px;
+        /* add padding between navbar buttons */
+        padding: 0 8px;
     }
     /* #navbar header, #navbar ul {
         padding-right: 16px;
     } */
     #main-doc {
         /* makes margin spaces so they won't collide with fixed pos. navbar */
-        margin-top: 99px;
+        margin-top: calc(53px + 8px);
     }
     /* creating pivot point for nav href clicking */
     .main-section {
-        padding-top: 99px;
-        margin-top: -99px;
+        padding-top: calc(53px + 8px);
+        margin-top: calc(-53px - 8px);
     }
 
     article pre {
@@ -66,7 +71,20 @@ header {
     }
 }
 @media only screen and (min-width: 816px) {
-    /* body {
-        display: flex;
-    } */
+    #navbar {
+        /* takes 20% of screen width */
+        max-width: 20vw;
+        /* prevent static pixel height from <815 */
+        min-height: 100vh;
+    }
+    #main-doc {
+        /* takes 80% of screen width */
+        max-width: 80vw;
+        /* padding space for navbar */
+        padding-left: 20vw;
+    }
+    .main-section {
+        padding-top: 8px;
+        margin-top: -8px;
+    }
 }
