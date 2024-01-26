@@ -53,13 +53,9 @@
                     repository is a whole git environment for your entire project that contains all your project files and directories.
                 </p>
                 <p>To use git right away, you need to make git environment on a folder/directory. Initialize it by using these commands on your preferred Terminal:</p>
-    
-                <pre>
-                    <code>
-$ cd /path/to/project/directory
-$ git init
-                    </code>
-                </pre>
+
+                <pre><code>cd /path/to/project/directory
+git init</code></pre>
     
                 <p>Creating empty repository will generate these files and is recognized by git:</p>
                 <ul>
@@ -77,14 +73,10 @@ $ git init
             <article>
                 <p>To initialize git repository until commiting to local repository (continuing from Setup section), use these commands in order:</p>
     
-                <pre>
-                    <code>
-$ cd /path/to/project/directory
-$ git init
-$ git add .
-$ git commit
-                    </code>
-                </pre>
+                <pre><code>cd /path/to/project/directory
+git init
+git add .
+git commit</code></pre>
     
                 <p>Here is the rundown of commands:</p>
 
@@ -139,22 +131,14 @@ $ git commit
                     in this case it is on "master" branch, so the commands are:
                 </p>
 
-                <pre>
-                    <code>
-$ git remote add origin https://github.com/my-username/repository-name.git
-$ git push -u origin master
-                    </code>
-                </pre>
+                <pre><code>git remote add origin https://github.com/my-username/repository-name.git
+git push -u origin master</code></pre>
 
                 <p>Everytime you are done on local commits and want to push your commits 
                     into GitHub remote repository you need to type this in Terminal:
                 </p>
                 
-                <pre>
-                    <code>
-$ git push -u origin master
-                    </code>
-                </pre>
+                <pre><code>git push -u origin master</code></pre>
             </article>
         </section>
 
@@ -169,20 +153,12 @@ $ git push -u origin master
                     switch to your desired branch name:
                 </p>
     
-                <pre>
-                    <code>
-$ git checkout -b your-branch-name
-$ git checkout your-branch-name
-                    </code>
-                </pre>
+                <pre><code>git checkout -b your-branch-name
+git checkout your-branch-name</code></pre>
 
                 <p>If you want to switch back to <em>main</em> branch:</p>
 
-                <pre>
-                    <code>
-$ git checkout main
-                    </code>
-                </pre>
+                <pre><code>git checkout main</code></pre>
 
                 <p>You might want to work on your project and make changes, then commit 
                     your changes on local branch, in case if you forget how to commit you can go <a href="#Commands">back to Commands section.</a> 
@@ -190,22 +166,14 @@ $ git checkout main
                     you can do this on Terminal:
                 </p>
                 
-                <pre>
-                    <code>
-$ git push -u origin your-branch-name-same-as-local
-                    </code>
-                </pre>
+                <pre><code>git push -u origin your-branch-name-same-as-local</code></pre>
 
                 <p>The code right before this is done one time only, 
                     the next time you want to push your commited changes on local 
                     you can do this instead:
                 </p>
 
-                <pre>
-                    <code>
-$ git push
-                    </code>
-                </pre>
+                <pre><code>git push</code></pre>
 
                 <p>
                     Here are the benefits of branching:
@@ -231,12 +199,8 @@ $ git push
                     from your remote branch, and check your status afterwards.
                 </p>
 
-                <pre>
-                    <code>
-$ git remote update
-$ git status
-                    </code>
-                </pre>
+                <pre><code>git remote update
+git status</code></pre>
 
                 <p>
                     These are the definition of git pull and git push, so you know 
@@ -257,27 +221,15 @@ $ git status
                     If your local branch commits are behind remote branch commits, do this command everytime after <code>git remote update</code>:
                 </p>
 
-                <pre>
-                    <code>
-$ git pull
-                    </code>
-                </pre>
+                <pre><code>git pull</code></pre>
 
                 <p>If your local is ahead of remote (after commit have been done), do this command everytime you want to push your commit into remote:</p>
 
-                <pre>
-                    <code>
-$ git push
-                    </code>
-                </pre>
+                <pre><code>git push</code></pre>
 
                 <p>Now you can check your commit log by using this command (after that, quit by pressing <kbd>q</kbd> on your keyboard):</p>
 
-                <pre>
-                    <code>
-$ git log --oneline
-                    </code>
-                </pre>
+                <pre><code>git log --oneline</code></pre>
             </article>
         </section>
     </main>
