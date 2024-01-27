@@ -24,15 +24,18 @@ header {
     text-decoration: none;
 }
 
+.main-section header {
+    background-image: linear-gradient(90deg, rgba(0,0,0,0), rgba(182, 180, 180, 0.2), rgba(0,0,0,0));
+}
 /* formatting codeblock and other smaller text tags */
 p > code, .main-section kbd, .main-section var {
-    background-color: lightgray;
+    background-color: rgb(243, 154, 199);
     padding: 0 5px;
-    font-size: 125%;
 }
 .main-section kbd {
     font-weight:600;
     background-color: turquoise;
+    font-size: 14px;
 }
 .main-section var {
     font-size: unset;
@@ -41,13 +44,23 @@ p > code, .main-section kbd, .main-section var {
 }
 .main-section pre {
     /* white-space: pre-wrap; */
-    background: linear-gradient(90deg, rgba(243, 154, 199, 0.5), rgba(243, 154, 199, 0));
-    font-size: 125%;
-    padding: 5px 0 5px 20px;
+    background-color: #eceaea;
+    color: #0c0d0e;
+    border-radius: 5px;
+    margin: 0;
+    padding: 15px 0 15px 20px;
+}
+.main-section code {
+    font-family: 'Cascadia Code', monospace;
+    font-size: 14px;
+    line-height: 150%;
 }
 .main-section a {
     text-decoration: none;
     color: rgb(36, 138, 255);
+}
+.main-section a:hover {
+    border-bottom: 2px solid;
 }
 .main-section a:active {
     background-color: rgb(36, 138, 255);
@@ -77,7 +90,7 @@ p > code, .main-section kbd, .main-section var {
         /* add horz. scrollbar for nav if width not suitable */
         overflow-x: auto;
 
-        background-image: linear-gradient(180deg, rgb(220, 217, 243), rgb(220, 217, 243), rgb(220, 217, 243), rgb(220, 217, 243), rgba(240, 240, 240, 0));
+        background-image: linear-gradient(180deg, white, white, white, white, rgba(240, 240, 240, 0));
         
     }
     #navbar li {
