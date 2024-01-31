@@ -1,0 +1,28 @@
+#nav-bar {
+    /* navbar should always be at the top of the viewport < */
+    top: 0; left: 0;
+    position: fixed;
+    z-index: 1;
+    /* > */
+
+}
+#nav-bar ul {
+    /* at least using one flexbox display < */
+    display: flex;
+    /* > */
+    list-style-type: none;
+}
+#nav-bar ul li {
+    padding: 0 10px;
+}
+
+/* makes navbar appear nicely even on mobile */
+@media only screen and (max-width: 650px) {
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #nav-bar ul li {
+        padding: 5px 0;
+    }
+}
