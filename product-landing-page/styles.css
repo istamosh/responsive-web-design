@@ -44,6 +44,9 @@ body {
 #main-section {
     display: flex;
     flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--tea-palette5);
 }
 
 .video-section {
@@ -51,6 +54,7 @@ body {
     display: inherit;
     flex-direction: inherit;
     align-items: center;
+    padding-top: 30px;
 }
 .video-section > p {
     margin: 8px 0 0;
@@ -72,6 +76,8 @@ body {
 }
 #main-section > article p {
     text-align: justify;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 /* makes navbar appear nicely even on mobile */
