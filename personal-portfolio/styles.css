@@ -1,0 +1,17 @@
+#navbar {
+    position: fixed;
+    top: 0; left: 0;
+}
+#navbar ul {
+    list-style-type: none;
+}
+#navbar a {
+    text-decoration: none;
+}
+#welcome-section {
+    height: 100vh;
+}
+
+@media screen and (max-width: 500px) {
+    
+}
