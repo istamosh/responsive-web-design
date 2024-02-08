@@ -25,7 +25,24 @@
             <h3>These are some of the projects I have worked on</h3>
             <!-- Project blocks -->
             <div class="project-tile">
-                <p>Codeigniter4 based bookstore with CRUD operations <a href="https://github.com/istamosh/ci4-duta-academy" target="_blank" rel="noopener noreferrer">here on GitHub page.</a></p>
+                <p>Codeigniter4 framework-based bookstore with CRUD operations <a href="https://github.com/istamosh/ci4-duta-academy" target="_blank" rel="noopener noreferrer">here on my GitHub page.</a></p>
+                
+                <div class="carousel-container">
+                    <button onclick="slideRight(-1)">&#10094;</button>
+
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-1.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-2.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-3.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-menucreate.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-menucreate2.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-created.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-menuupdate.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-updated.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-menudelete.jpg" alt="">
+                    <img class="slide" loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/137649cc42357201a936fa301c321fb21f51cd0a/personal-portfolio/src/carousel/ci4-deleted.jpg" alt="">
+                
+                    <button onclick="slideRight(1)">&#10095;</button>
+                </div>
             </div>
 
             <div class="project-tile">
@@ -63,5 +80,23 @@
                 After no longer working for a company, I want to look for hard skills and at the same time prove what abilities I have, but I only have a CV and a certificate which may not be included when carrying out a job interview, therefore I need real proof, namely by making web-based portfolio. While I continue one of my passions and side jobs, namely designing with Adobe Photoshop.</p>
         </section>
     </div>
+
+    <script>
+        var slideIndex = 1;
+        showImage(slideIndex);
+
+        function slideRight(n) {
+            showImage(slideIndex += n);
+        }
+
+        function showImage(n) {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
