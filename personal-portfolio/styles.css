@@ -1,16 +1,31 @@
+:root {
+    --normal: 60px;
+    --shrink: 40px;
+}
+
 #navbar {
     display: flex;
+    /* shift list to right */
     justify-content: flex-end;
 
+    /* always shows up and takes the entire screen */
     position: fixed;
     top: 0; left: 0;
     width: 100%;
+
+    /* hardcode the height so main section margin can be defined */
+    height: var(--normal);
+
+    background-color: white;
 }
 #navbar ul {
     display: inherit;
     flex-direction: row;
 
+    /* remove the dots */
     list-style-type: none;
+
+    padding: 0 1vw;
 }
 #navbar li {
     padding: 0 2vw;
@@ -21,6 +36,12 @@
 #navbar h2 {
     margin: 0;
 }
+
+.main-section {
+    /* shift main section so it won't get behind navbar */
+    margin-top: var(--normal);
+}
+
 #welcome-section {
     height: 100vh;
 }
@@ -28,19 +49,72 @@
 .carousel-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    /* prevent image overflow inside container */
+    overflow: hidden;
     height: 300px;
+
+    /* fit when shrinked */
+    max-width: 100%;
 }
 .slide {
     /* just display one of a time */
     display: none;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
 
-@media only screen and (max-width: 500px) {
-    #navbar ul {
-        flex-direction: column;
+#certificate div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    /* preserve space for image wrapping */
+    max-height: 800px;
+
+    /* make child display proportional to the screen */
+    width: 100%;
+}
+#certificate img {
+    /* fit image */
+    object-fit: scale-down;
+    max-height: 100%;
+    max-width: 100%;
+
+    /* define the height of image */
+    height: 250px;
+
+    /* add gap between images */
+    padding: 5px;
+}
+
+#about {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        height: var(--shrink);
+
+        /* center the ul */
+        justify-content: center;
+        /* align the text so it stays on bottom */
+        align-items: flex-end;
     }
-    #navbar h2 {
-        margin: 5px 0;
+    #navbar ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-section {
+        /* shift main section so it won't get behind navbar */
+        margin-top: var(--shrink);
+    }
+
+    #certificate div {
+        /* when shrinked display image columned */
+        flex-direction: column;
     }
 }
