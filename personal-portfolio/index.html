@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
 </head>
-<body>
+<body class="dark-mode">
     <nav id="navbar">
         <ul>
             <li><a href="#"><h2>About</h2></a></li>
@@ -19,11 +19,8 @@
 
     <div class="main-section">
         <section id="welcome-section">
-            <h1>Salutations! I am Alfian "Istamosh", I'm from Indonesia</h1>
-        </section>
-
-        <section id="service">
-            <p>I do freelance work using Adobe Photoshop and Web Designing</p>
+            <h1>Salutations! I am Alfian "Istamosh" and I am from Indonesia</h1>
+            <p>I do freelancing work using Adobe Photoshop and Web Designing</p>
         </section>
 
         <section id="projects">
@@ -51,16 +48,21 @@
             </div>
 
             <div class="project-tile">
-                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </div>
-
-            <div class="project-tile">
-                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+                <a 
+                id="project-list"
+                href="https://istamosh.github.io/" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                    <p>My Project List Page</p>
+                    <img src="src/carousel/collage.jpg" 
+                    alt="">
+                </a>
             </div>
         </section>
 
         <section id="certificate">
             <h3>Certificates</h3>
+
             <div>
                 <img loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/experiment/personal-portfolio/src/certificate/20231225_CI4.jpg" alt="codeigniter 4">
                 <img loading="lazy" src="https://raw.githubusercontent.com/istamosh/responsive-web-design/experiment/personal-portfolio/src/certificate/20231208_Photoshop.jpg" alt="photoshop">
@@ -69,24 +71,16 @@
         </section>
 
         <section id="contact">
-            <i class="fa-brands fa-square-github"></i>
-            <a href="https://github.com/istamosh" id="profile-link" target="_blank"></a>
-            <a href="">My Email</a>
-            <a href="">My Instagram</a>
-            <a href="">My Facebook</a>
-            <a href="">My LinkedIn</a>
-        </section>
-
-        <section id="about">
-            <p id="backstory">I just wanted to learn about Blogspot in 2012, but after checking the settings page to see the appearance of the blog, and also wanting to make money from there by adding a PayPal widget, then from there PayPal only provided an embed code, I wondered in my mind what an embed code was, apparently it had something to do with HTML code, then I remembered where I had seen it, it turned out it was located on the blogspot settings page, then after copying it and placing it on the blog, the PayPal widget appeared on my blog and the link matched what I wanted, but not in the place I wanted, from there I was curious and interested in HTML code, tags, and their structure and how they work, finally after hours of learning about what HTML was on a Sony Ericsson cellphone and after that applying it while playing internet cafes, finally I put the widget where I wanted it.</p>
-            <p id="past-work">I was once a game master staff at one of the online game publishers in Indonesia, there I learned a lot of excel formulas, promotions, sales, attracting the attention of young children, interacting with the game community, and how to interact and handle complaints, as well as conveying their complaints to superiors, testing the game before it is released to players.
-                Then in my second job I became a TMC salesman at a cigarette company, there I learned how to win over customers and learned psychological tricks, how to sell products, install POSM, manage time, estimate products that will be sold today and also how to persuade, and daily sales routes.
-                And in my third job I became an IT support whose job was installing network cables, installing computers, and using Excel macros to print daily employee attendance.
-                After no longer working for a company, I want to look for hard skills and at the same time prove what abilities I have, but I only have a CV and a certificate which may not be included when carrying out a job interview, therefore I need real proof, namely by making web-based portfolio. While I continue one of my passions and side jobs, namely designing with Adobe Photoshop.</p>
+            <a href="https://github.com/istamosh" id="profile-link" target="_blank"><i class="fa-brands fa-square-github"></i><span>GitHub</span></a>
+            <a href="mailto:alfianferdinan@gmail.com" id="profile-link" target="_blank"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+            <a href="https://www.instagram.com/istamosh/" id="profile-link" target="_blank"><i class="fa-brands fa-square-instagram"></i><span>Instagram</span></a>
+            <a href="https://www.facebook.com/dindu.nuffin.169/" id="profile-link" target="_blank"><i class="fa-brands fa-square-facebook"></i><span>Facebook</span></a>
+            <a href="https://www.linkedin.com/in/alfian-f-02a0032a9/" id="profile-link" target="_blank"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
         </section>
     </div>
 
     <script>
+        // slideshow
         var slideIndex = 1;
         showImage(slideIndex);
 

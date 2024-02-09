@@ -46,6 +46,11 @@
     height: 100vh;
 }
 
+#projects h3, #projects p {
+    text-align: center;
+    margin: 0;
+}
+
 .carousel-container {
     display: flex;
     justify-content: center;
@@ -62,9 +67,49 @@
     /* just display one of a time */
     display: none;
     width: 100%;
+
+    max-width: 500px;
+}
+.carousel-container button {
+    height: 100%;
+    width: 40px;
+
+    /* overwrite button */
+    border: none;
+    background-color: white;
+    font-size: 200%;
+}
+.carousel-container button:hover {
+    border: 2px solid black;
+}
+/* .carousel-container button:first-child:hover {
+    border-radius: 20px 0 0 20px;
+
+    background: linear-gradient(-90deg, white, #c7c7c7);
+}
+.carousel-container button:last-child:hover {
+    border-radius: 0 20px 20px 0;
+
+    background: linear-gradient(90deg, white, #c7c7c7);
+} */
+
+#project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#project-list p {
+    margin: 0;
+}
+#project-list img {
+    /* flex shrinked */
+    width: 100%;
     max-width: 500px;
 }
 
+#certificate h3 {
+    text-align: center;
+}
 #certificate div {
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +133,29 @@
 
     /* add gap between images */
     padding: 5px;
+}
+
+#contact {
+    margin: 20px 0;
+
+    /* center and wrap icons */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#profile-link {
+    color: black;
+    text-decoration: none;
+
+    padding: 0 10px;
+
+    /* center the text inline with icon */
+    display: inherit;
+    align-items: center;
+}
+#profile-link i {
+    font-size: 30px;
+    margin-right: 5px;
 }
 
 #about {
