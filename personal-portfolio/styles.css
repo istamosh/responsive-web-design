@@ -12,6 +12,7 @@
     position: fixed;
     top: 0; left: 0;
     width: 100%;
+    z-index: 1;
 
     /* hardcode the height so main section margin can be defined */
     height: var(--normal);
@@ -44,6 +45,12 @@
 
 #welcome-section {
     height: 100vh;
+    background: black;
+}
+#welcome-section img {
+    width: 100vh;
+    height: 100vh;
+    object-fit: contain;
 }
 
 #projects h3, #projects p {
