@@ -48,6 +48,9 @@
     background: black;
 }
 #welcome-section img {
+    position: absolute;
+    top: 50px;
+    right: -100px;
     width: 100vh;
     height: 100vh;
     object-fit: contain;
